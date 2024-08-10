@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
-          My First static website
+          My First static website staging 
         </p>
         <p>Version 1.0</p>
       </header>
