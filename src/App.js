@@ -9,6 +9,7 @@ function App() {
         <p>
           My First static website
         </p>
+        <p>Version 1.0</p>
       </header>
     </div>
   );
