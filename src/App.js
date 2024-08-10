@@ -9,7 +9,7 @@ function App() {
         <p>
           My First static website staging 
         </p>
-        <p>Version 1.0</p>
+        <p>Version 1.1</p>
       </header>
     </div>
   );
