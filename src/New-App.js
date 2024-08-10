@@ -12,7 +12,7 @@ import './App.css';
 function App() {
   return (
     <Router>
-      {/* <RedirectHandler /> */}
+      <RedirectHandler />
       <div className='main-container'>
           <div className='image-section'>
               <img src={logo} className="App-logo1" alt="logo" />
@@ -32,16 +32,16 @@ function App() {
   );
 }
 
-// function RedirectHandler() {
-//   const navigate = useNavigate();
-//   useEffect(() => {
-//     const path = window.location.search.split('?')[1];
-//     if (path) {
-//       navigate('/' + path);
-//     }
-//   }, [navigate]);
+function RedirectHandler() {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const path = window.location.search.split('?')[1];
+    if (path) {
+      navigate('/' + path);
+    }
+  }, [navigate]);
 
-//   return null;
-// }
+  return null;
+}
 
 export default App;
