@@ -8,9 +8,15 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-logo1 {
+    animation: shake 1.5s;
   }
+}
+
+.App-logo1 {
+  animation: shake 1.5s;
+  position: absolute;
+  width: 100px;
 }
 
 .App-header {
@@ -24,6 +30,40 @@
   color: white;
 }
 
+.main-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #a4cef7;
+}
+
+.image-section {
+  flex-basis: 20%;
+}
+
+.nav-bar {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-basis: 50%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.nav-bar a:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* .main-layout {
+  background-image: url("assets/SHOPPING.png");
+} */
+
 .App-link {
   color: #61dafb;
 }
@@ -34,5 +74,31 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(-15deg);
+  }
+
+  20% {
+    transform: rotate(15deg);
+  }
+
+  30% {
+    transform: rotate(-7deg);
+  }
+
+  40% {
+    transform: rotate(7deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
   }
 }
