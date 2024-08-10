@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+  "homepage": "https://MarvanN.github.io/Static-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
