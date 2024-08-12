@@ -2,17 +2,24 @@ import React, { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../../firebase';
 
-const AddUser = () => {
+import { connect } from 'react-redux';
+import { addUser } from '../../actions/userActions';
+
+import { useNavigate } from 'react-router-dom';
+
+const AddUser = ({ addUser }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
+  const navigate = useNavigate();
+
   const handleAddUser = async () => {
     try {
-      await addDoc(collection(db, "users"), {
-        name: name,
-        email: email
-      });
-      console.log('User added successfully');
+      // Dispatch the addUser action with the new user data
+      addUser({ name, email });
+      setName(''); // Clear input after submission
+      setEmail(''); // Clear input after submission
+      // navigate('/users');
     } catch (error) {
       console.error('Error adding user:', error.message);
     }
@@ -38,4 +45,8 @@ const AddUser = () => {
   );
 };
 
-export default AddUser;
+const mapDispatchToProps = {
+  addUser,
+};
+
+export default connect(null, mapDispatchToProps)(AddUser);
