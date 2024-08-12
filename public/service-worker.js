@@ -8,8 +8,8 @@ const CACHE_ASSETS = [
     '/favicon.ico',
     '/logo192.png',
     '/logo512.png',
-    '/static/css/main.css', // Update with your CSS path
-    '/static/js/main.js',   // Update with your JS path
+    '/static/css/main.861b9baf.css', // Update with your CSS path
+    '/static/js/main.c53f22e8.js',   // Update with your JS path
 ];
 
 self.addEventListener('install', (event) => {
